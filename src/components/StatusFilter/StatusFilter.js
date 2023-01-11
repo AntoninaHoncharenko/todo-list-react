@@ -10,7 +10,7 @@ export const StatusFilter = () => {
   const dispatch = useDispatch();
 
   const handleFilterChange = filter => {
-    dispatch(setStatusFilter(filter));
+    return dispatch(setStatusFilter(filter));
   };
 
   return (

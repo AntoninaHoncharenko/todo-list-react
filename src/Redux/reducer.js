@@ -11,11 +11,11 @@ const taskInitialState = [
 
 const taskReducer = (state = taskInitialState, action) => {
   switch (action.type) {
-    case 'tasks/addTask':
+    case 'task/addTask':
       return [...state, action.payload];
-    case 'tasks/deleteTask':
+    case 'task/deleteTask':
       return state.filter(task => task.id !== action.payload);
-    case 'tasks/toggleCompleted':
+    case 'task/toggleCompleted':
       return state.map(task => {
         if (task.id !== action.payload) {
           return task;
@@ -33,7 +33,7 @@ const filtersInitialState = {
 
 const filterReducer = (state = filtersInitialState, action) => {
   switch (action.type) {
-    case 'filters/setStatusFilter':
+    case 'filter/setStatusFilter':
       return {
         ...state,
         status: action.payload,

@@ -20,7 +20,7 @@ export const deleteTask = taskId => {
 
 export const toggleCompleted = taskId => {
   return {
-    type: 'task/toggleCopleted',
+    type: 'task/toggleCompleted',
     payload: taskId,
   };
 };
